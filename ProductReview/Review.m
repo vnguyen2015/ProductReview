@@ -1,0 +1,32 @@
+//
+//  Review.m
+//  ProductReview
+//
+//  Created by nxvinh@gmail.com on 5/27/16.
+//  Copyright © 2016 vnguyen2015. All rights reserved.
+//
+
+#import "Review.h"
+
+@implementation Review
+
+
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"objectId": @"ID",
+                                                       @"comment": @"Comment",
+                                                       @"productID.objectId": @"ProductID",
+                                                       @"userID.objectId": @"UserID",
+                                                       @"rating":@"Rate",
+                                                       @"updatedAt":@"Date"
+                                                       }];
+}
+
+
+
+@end
+
+@implementation ReviewList
+
+@end
